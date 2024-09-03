@@ -1,0 +1,105 @@
+[gd_scene load_steps=3 format=3 uid="uid://xn0spk71po11"]
+
+[ext_resource type="Script" path="res://UI/userInterface/eixtgame.gd" id="1_7h1fy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2hght"]
+font_size = 106
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7h1fy")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.234
+anchor_top = 0.167
+anchor_right = 0.757
+anchor_bottom = 0.393
+offset_left = 255.432
+offset_top = 61.784
+offset_right = -255.064
+offset_bottom = -61.664
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "are you exit"
+label_settings = SubResource("LabelSettings_2hght")
+
+[node name="yes" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22
+anchor_top = 0.685
+anchor_right = 0.407
+anchor_bottom = 0.758
+offset_left = -0.440018
+offset_top = 0.119965
+offset_right = 0.135986
+offset_bottom = -0.184021
+grow_horizontal = 2
+grow_vertical = 2
+text = "yes"
+
+[node name="no" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.544
+anchor_top = 0.685
+anchor_right = 0.732
+anchor_bottom = 0.758
+offset_left = 0.311951
+offset_top = 0.119965
+offset_right = -0.264038
+offset_bottom = -0.184021
+grow_horizontal = 2
+grow_vertical = 2
+text = "no"
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="GUI"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -58.0
+offset_right = 156.0
+offset_bottom = -31.0
+grow_vertical = 2
+rotation = 4.71239
+pivot_offset = Vector2(103.622, 13.6695)
+max_value = 500.0
+step = 1.0
+value = 250.0
+
+[node name="Label" type="Label" parent="GUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.039
+anchor_top = 0.233
+anchor_right = 0.067
+anchor_bottom = 0.269
+offset_left = 0.0719986
+offset_top = 0.0159912
+offset_right = -0.184006
+offset_bottom = -0.312012
+text = "能量"
+
+[connection signal="pressed" from="Control/yes" to="Control" method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/no" to="Control" method="_on_no_pressed"]

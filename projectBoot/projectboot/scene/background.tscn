@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://cle22ui8x50p0"]
+
+[ext_resource type="Script" path="res://script/levelScript/background.gd" id="1_eqn5b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6kcco"]
+albedo_color = Color(0.406016, 0.176069, 0.0319015, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ualuq"]
+material = SubResource("StandardMaterial3D_6kcco")
+size = Vector3(3.645, 15.11, 3.835)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vuigh"]
+albedo_color = Color(0.537215, 0.210779, 1.44392e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5e3qn"]
+material = SubResource("StandardMaterial3D_vuigh")
+size = Vector3(2.235, 14.255, 1)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0951838, 0)
+
+[node name="background" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.997473, -0.0143906, 0.0695748, -0.0133025, 0.924125, 0.381859, -0.069791, -0.381819, 0.921598, 3.01136, 18.4669, -8.46293)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, 2, 0)
+duration = 2.0
+
+[node name="background7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.887939, 0.397266, 0.23183, -0.454637, 0.834502, 0.311307, -0.069791, -0.381819, 0.921598, 10.211, 17.4836, -8.46293)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, 2, 0)
+
+[node name="background6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.920617, -0.386072, -0.0584154, 0.374342, 0.830118, 0.413248, -0.111052, -0.40231, 0.908743, -4.40376, 17.853, -8.46293)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, 2, 0)
+duration = 1.5
+
+[node name="background4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.803194, -0.579206, -0.139283, 0.580496, 0.708463, 0.401379, -0.133805, -0.403238, 0.90526, -11.6069, 17.853, -8.46293)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, 2, 0)
+duration = 1.2
+
+[node name="background2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.744778, 0.667313, 1.1917e-08, -0.646521, 0.721573, -0.247675, -0.165277, 0.184463, 0.968843, -6.19683, 2.11854, -8.46293)
+mesh = SubResource("BoxMesh_5e3qn")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, -1, 0)
+duration = 1.2
+
+[node name="background5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.939788, 0.291132, 0.179001, -0.213535, 0.909147, -0.357567, -0.266838, 0.297814, 0.916572, 2.98068, -0.0469832, -8.46293)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, -2, 0)
+duration = 2.0
+
+[node name="background8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.879833, -0.312852, 0.357794, 0.351328, 0.935107, -0.0462834, -0.320096, 0.166425, 0.932653, 11.7958, -0.0469832, -8.46293)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, -2, 0)
+duration = 1.1
+
+[node name="background3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.744778, 0.667313, -1.1917e-08, -0.5232, 0.583935, -0.62071, -0.414208, 0.462291, 0.78404, -12.6968, 2.15333, -9.7793)
+mesh = SubResource("BoxMesh_ualuq")
+skeleton = NodePath("../..")
+script = ExtResource("1_eqn5b")
+move = Vector3(0, -2, 0)

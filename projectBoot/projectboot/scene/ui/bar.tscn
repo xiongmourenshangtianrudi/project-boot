@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwhjpb5r477k4"]
+
+[ext_resource type="Script" path="res://scene/ui/script/progressBar.gd" id="1_8dhri"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_s26wc"]
+viewport_path = NodePath("Sprite3D/SubViewport")
+
+[node name="Node" type="Node"]
+script = ExtResource("1_8dhri")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 91.4
+far = 4003.75
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.03022)
+billboard = 1
+texture = SubResource("ViewportTexture_s26wc")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
+transparent_bg = true
+size = Vector2i(1152, 648)
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite3D/SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -25.0
+offset_right = 9500.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 100000.0
+step = 1.0

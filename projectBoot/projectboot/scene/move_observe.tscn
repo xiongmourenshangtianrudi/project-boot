@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfkrtpmpisa4w"]
+
+[ext_resource type="Script" path="res://script/move_observe.gd" id="1_1cpt5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvhky"]
+albedo_color = Color(0.854006, 0.641921, 0.0178257, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oorka"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7blm"]
+size = Vector3(2, 2, 2)
+
+[node name="moveObserve" type="AnimatableBody3D" groups=["hazard"]]
+transform = Transform3D(1, 8.72665e-05, 0, -8.72665e-05, 1, 0, 0, 0, 1, 0, 1.6042, 0)
+script = ExtResource("1_1cpt5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_nvhky")
+mesh = SubResource("BoxMesh_oorka")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_m7blm")

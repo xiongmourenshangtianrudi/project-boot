@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw5d0hitqf8bv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf0sy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6dwe"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vjkkn"]
+lifetime_randomness = 0.18
+angle_min = 3.40001
+angle_max = 130.2
+inherit_velocity_ratio = 0.6
+flatness = 0.045
+angular_velocity_min = 5.03998
+angular_velocity_max = 70.49
+linear_accel_min = -2.35
+linear_accel_max = -2.23517e-06
+turbulence_enabled = true
+turbulence_noise_scale = 7.719
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nec6v"]
+albedo_color = Color(0.853788, 0.167985, 0.247363, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_148sf"]
+material = SubResource("StandardMaterial3D_nec6v")
+radius = 0.2
+height = 0.4
+radial_segments = 32
+rings = 16
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.83573, 0)
+material_override = SubResource("StandardMaterial3D_rf0sy")
+material_overlay = SubResource("StandardMaterial3D_w6dwe")
+amount = 32
+lifetime = 0.72
+speed_scale = 8.2
+randomness = 0.1
+collision_base_size = 3.36
+visibility_aabb = AABB(-4, -3.925, -4, 8, 8, 8)
+local_coords = true
+draw_order = 1
+trail_lifetime = 0.71
+process_material = SubResource("ParticleProcessMaterial_vjkkn")
+draw_pass_1 = SubResource("SphereMesh_148sf")

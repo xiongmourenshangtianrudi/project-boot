@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuwf450mi0u66"
+path="res://.godot/imported/Maksim Starshinov - Invention _Battle City_ for Piano.mp3-2d5f08578ce65ff61b6b671edf790f5c.mp3str"
+
+[deps]
+
+source_file="res://sound/Maksim Starshinov - Invention _Battle City_ for Piano.mp3"
+dest_files=["res://.godot/imported/Maksim Starshinov - Invention _Battle City_ for Piano.mp3-2d5f08578ce65ff61b6b671edf790f5c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

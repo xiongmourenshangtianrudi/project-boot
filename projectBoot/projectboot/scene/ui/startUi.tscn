@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv574rh6liiky"]
+
+[ext_resource type="Script" path="res://scene/ui/start_ui.gd" id="1_h3bcr"]
+[ext_resource type="Texture2D" uid="uid://bre7vulrbhqx5" path="res://fire.jpg" id="2_loaia"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_04p6m"]
+font_size = 36
+font_color = Color(0.100901, 0.702676, 0.874898, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h3bcr")
+next_Scene = "res://scene/level/level.tscn"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.385
+anchor_top = 0.439
+anchor_right = 0.615
+anchor_bottom = 0.561
+offset_left = -0.52002
+offset_top = 0.0279846
+offset_right = 0.52002
+offset_bottom = -0.0280457
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "project boot"
+label_settings = SubResource("LabelSettings_04p6m")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "english"
+
+[node name="start" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.416
+anchor_top = 0.614
+anchor_right = 0.57
+anchor_bottom = 0.667
+offset_left = -0.231995
+offset_top = 0.127991
+offset_right = 0.359924
+offset_bottom = -0.216034
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath(".")
+text = "game play"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.418
+anchor_top = 0.705
+anchor_right = 0.572
+anchor_bottom = 0.762
+offset_left = 0.463989
+offset_top = 0.159973
+offset_right = 0.0559692
+offset_bottom = 0.223999
+grow_horizontal = 2
+grow_vertical = 2
+text = "exit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.447
+anchor_top = 0.12
+anchor_right = 0.564
+anchor_bottom = 0.39
+offset_left = 1.05597
+offset_top = 1.24
+offset_right = 1.27197
+offset_bottom = 2.27998
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_loaia")
+expand_mode = 1
+
+[connection signal="pressed" from="start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
